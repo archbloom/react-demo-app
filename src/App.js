@@ -5,7 +5,7 @@ import Nav from './Nav';
 import About from './About';
 import RecipeListing from './RecipeListing';
 import BreakingBad from './BreakingBad';
-import BreakingBadCharacter from './BreakingBadCharater';
+import BreakingBadCharacter from './BreakingBadCharacter';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
