@@ -1,7 +1,7 @@
 // https://breakingbadapi.com/documentation
 
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const BreakingBad = () => {
   const [characters, setCharacters] = useState([]);
@@ -19,7 +19,7 @@ const BreakingBad = () => {
   };
 
   return (
-    <div className="BreakingBad">
+    <div className='BreakingBad'>
       <h1>Few Characters:</h1>
       {characters.map(char => (
         <Link to={`/breaking-bad/${char.char_id}`}>

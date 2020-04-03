@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Recipe from "./Recipe";
+import React, { useEffect, useState } from 'react';
+import Recipe from './Recipe';
 
 const RecipeListing = () => {
-  const APP_ID = "11cbe344";
-  const APP_KEY = "797e46b298abfd26de41839921b778f1";
+  const APP_ID = '11cbe344';
+  const APP_KEY = '797e46b298abfd26de41839921b778f1';
 
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("paneer");
+  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('paneer');
 
   useEffect(() => {
     getRecipes();
@@ -29,30 +29,30 @@ const RecipeListing = () => {
     console.log(search);
     e.preventDefault();
     setQuery(search);
-    setSearch("");
+    setSearch('');
   };
 
   return (
-    <div className="App input-group mt-1">
-      <form onSubmit={getSearch} className="search-form">
-        <div className="input-group-append" id="button-addon4">
+    <div className='App input-group mt-1'>
+      <form onSubmit={getSearch} className='search-form'>
+        <div className='input-group-append' id='button-addon4'>
           <input
-            type="text"
-            className="search-bar form-control"
+            type='text'
+            className='search-bar form-control'
             value={search}
             onChange={updateSearch}
-            aria-describedby="button-addon4"
+            aria-describedby='button-addon4'
           />
           <button
-            className="search-btn btn btn-outline-secondary"
-            placeholder="Search Recipe"
-            type="submit"
+            className='search-btn btn btn-outline-secondary'
+            placeholder='Search Recipe'
+            type='submit'
           >
             Search
           </button>
         </div>
       </form>
-      <div className="row mt-1 mr-1 ml-1">
+      <div className='row mt-1 mr-1 ml-1'>
         {recipes.map(recipe => (
           <Recipe
             key={recipe.recipe.label}
