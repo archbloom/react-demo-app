@@ -14,15 +14,27 @@ const App = () => {
       <div className='App'>
         <Nav />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/about' exact component={About} />
-          <Route path='/breaking-bad' exact component={BreakingBad} />
+          <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
           <Route
-            path='/breaking-bad/:id'
+            path={`${process.env.PUBLIC_URL}/about`}
+            exact
+            component={About}
+          />
+          <Route
+            path={`${process.env.PUBLIC_URL}/breaking-bad`}
+            exact
+            component={BreakingBad}
+          />
+          <Route
+            path={`${process.env.PUBLIC_URL}/breaking-bad/:id`}
             exact
             component={BreakingBadCharacter}
           />
-          <Route path='/recipe-listing' exact component={RecipeListing} />
+          <Route
+            path={`${process.env.PUBLIC_URL}/recipe-listing`}
+            exact
+            component={RecipeListing}
+          />
         </Switch>
       </div>
     </Router>

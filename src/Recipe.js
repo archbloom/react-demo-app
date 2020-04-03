@@ -7,14 +7,14 @@ const Recipe = ({ title, calories, image, link }) => {
         <div className='card-body'>
           <h3 className='card-title'>{title}</h3>
           <p className='card-text'>{calories}</p>
-          <img src={image} class='img-thumbnail' />
+          <img src={image} className='img-thumbnail' />
           <br />
           <br />
           <a
             href={link}
             target='_blank'
             rel='noopener noreferrer'
-            class='btn btn-primary'
+            className='btn btn-primary'
           >
             Go to Website
           </a>

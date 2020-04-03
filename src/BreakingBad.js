@@ -22,8 +22,9 @@ const BreakingBad = () => {
     <div className='BreakingBad'>
       <h1>Few Characters:</h1>
       {characters.map(char => (
-        <Link to={`/breaking-bad/${char.char_id}`}>
+        <Link to={`${process.env.PUBLIC_URL}/breaking-bad/${char.char_id}`}>
           <span key={char.char_id}>{char.name}</span>
+          <br />
         </Link>
       ))}
     </div>
