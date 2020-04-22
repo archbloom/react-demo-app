@@ -21,11 +21,11 @@ const RecipeListing = () => {
     setRecipes(data.hits);
   };
 
-  const updateSearch = e => {
+  const updateSearch = (e) => {
     setSearch(e.target.value);
   };
 
-  const getSearch = e => {
+  const getSearch = (e) => {
     console.log(search);
     e.preventDefault();
     setQuery(search);
@@ -53,7 +53,7 @@ const RecipeListing = () => {
         </div>
       </form>
       <div className='row mt-1 mr-1 ml-1'>
-        {recipes.map(recipe => (
+        {recipes.map((recipe) => (
           <Recipe
             key={recipe.recipe.label}
             title={recipe.recipe.label}
