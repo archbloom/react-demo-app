@@ -33,7 +33,7 @@ const RecipeListing = () => {
   };
 
   return (
-    <div className='App input-group mt-1'>
+    <div className='row justify-content-center align-items-center'>
       <form onSubmit={getSearch} className='search-form'>
         <div className='input-group-append' id='button-addon4'>
           <input
@@ -44,7 +44,7 @@ const RecipeListing = () => {
             aria-describedby='button-addon4'
           />
           <button
-            className='search-btn btn btn-outline-secondary'
+            className='search-btn btn btn-outline-secondary ml-3'
             placeholder='Search Recipe'
             type='submit'
           >
